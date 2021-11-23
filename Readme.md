@@ -41,7 +41,7 @@ MUST be an IPLD link to [DAG-PB] directory, which SHOULD contain exactly one nam
 
 ## IPNFT
 
-Every IPNFT node MUST be [DAG-CBOR][] encoded data structure which MUST have:
+Every IPNFT MUST be [DAG-CBOR][] encoded data structure which MUST have:
 
 1. `type` property with `"nft"` value.
 1. `name` property with a string vaule.
@@ -56,7 +56,7 @@ All NFT assets MUST be included in IPNFT data structure as [asset links](#Asset-
 
 ### `metadata.json` content
 
-It is RECOMMENDED for IPNFT node to have a `metadata.json` IPLD link to a JSON source in [DAG-PB][] or RAW encoding mirroring IPNFT data structure with following caveats:
+It is RECOMMENDED for IPNFT to have a `metadata.json` IPLD link to a JSON source in [DAG-PB][] or RAW encoding mirroring IPNFT data structure with following caveats:
 
 1. `type` property is OPTIONAL and can be omitted. If present it MUST have value `"nft"`.
 2. Asset links MUST be substituted for corresponding `ipfs://{asset_cid}/file.png` URLs in string format _(substitute `file.png` with actual file name)_.
